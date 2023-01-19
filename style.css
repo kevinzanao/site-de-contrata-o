@@ -91,12 +91,19 @@ p {
    display: none;
 }
 
+.container {
+   display: grid;
+   grid-template-rows: repeat(3, calc(100vh));
+   text-overflow: clip;
+}
+
 .container .section-aboutUs {
-   height: calc(80vh - 99px);
+   height: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin-top: 2rem;
+   gap: 5rem;
+   margin-top: 3rem;
 }
 
 .container .section-aboutUs .aboutUs {
@@ -129,7 +136,6 @@ p {
    display: flex;
    justify-content: center;
    gap: .5rem;
-   margin-top: 3rem;
 }
 
 .container .section-aboutUs .metric .metric-item {
@@ -151,7 +157,29 @@ p {
    color: var(--title-color)
 }
 
+.container  .section-jobs {
+   text-align: center;
+   margin-top: 2rem;
+}
 
+.container .section-jobs .jobs-status span {
+   color: var(--main-color);
+   padding: 4px 12px;
+   border-radius: 1rem;
+   background-color: rgba(142, 36, 36, 0.05);
+}
+
+.container .section-jobs .jobs-description h2 {
+   margin: 2rem 0;
+}
+
+.container .section-jobs .jobs-description p {
+   margin-bottom: 4rem;
+} 
+
+.container .section-jobs .jobs-ilustration img {
+   width: 100%;
+}
 
 
 
@@ -191,17 +219,25 @@ p {
    }
 
    .container .section-aboutUs {
-      height: calc(90vh - 99px);
+      gap: 0;
    }
 
    .container .section-aboutUs .metric {
       flex-wrap: wrap;
       justify-content: space-evenly;
-      gap: 1rem;
+      gap: 1rem; 
+      margin-top: 7rem;
    }
 
    .container .section-aboutUs .metric .metric-item {
       width: 150px;
+      font-size: 90%;
+   }
+}
+
+@media screen and (max-width: 701px) {
+   .container .section-jobs {
+      margin-top: 16rem;
    }
 }
 
@@ -212,6 +248,7 @@ p {
    }
 
    .page-header {
+      margin-bottom: 4rem;
       grid-template-columns: 1fr 1fr;
    }
 
@@ -229,6 +266,7 @@ p {
 
    .container .section-aboutUs .aboutUs span {
       margin-bottom: 1em;
+      font-size: 1.5rem;
    }
 
    .container .section-aboutUs .aboutUs h1 {
@@ -237,10 +275,17 @@ p {
 
    .container .section-aboutUs .metric {
       text-align: left;
+      margin-top: 2rem;
    }
 
    .container .section-aboutUs .metric .metric-item {
       width: 100px;
       margin: 1rem 0;
+   }
+}
+
+@media screen and (max-width: 343px) {
+   .container .section-jobs {
+      margin-top: 40rem;
    }
 }
