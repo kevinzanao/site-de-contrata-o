@@ -195,7 +195,6 @@ p {
    }
 
    .container .section-aboutUs .metric {
-      width: 100%;
       flex-wrap: wrap;
       justify-content: space-evenly;
       gap: 1rem;
@@ -236,8 +235,12 @@ p {
       font-size: 2em;
    }
 
+   .container .section-aboutUs .metric {
+      text-align: left;
+   }
+
    .container .section-aboutUs .metric .metric-item {
-      width: 280px;
+      width: 100px;
       margin: 1rem 0;
    }
 }
