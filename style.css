@@ -52,7 +52,7 @@ p {
    gap: 32px;
    list-style: none;
    font-size: 0.9em;
-   line-height: 24px;
+   /* line-height: 24px; */
 }
 
 .page-header .header-navigation ul li a {
@@ -128,7 +128,6 @@ p {
 .container .section-aboutUs .metric {
    display: flex;
    justify-content: center;
-   /* flex-wrap: wrap; */
    gap: .5rem;
    margin-top: 3rem;
 }
@@ -193,6 +192,13 @@ p {
 
    .container .section-aboutUs {
       height: calc(90vh - 99px);
+   }
+
+   .container .section-aboutUs .metric {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 1rem;
    }
 
    .container .section-aboutUs .metric .metric-item {
