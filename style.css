@@ -23,14 +23,17 @@ p {
 }
 
 .page-header {
+   width: calc(100% - 8rem);
    display: grid;
    grid-template-columns: 1fr 2fr 1fr;
    grid-template-rows: repeat(1, 4rem);
+   margin-top: -6rem;
+   position: fixed;
+   background-color: #fff;
 }
 
 .page-header div {
    display: flex;
-   /* border: 1px solid #000; */
 }
 
 .page-header div:nth-child(1) {
@@ -52,12 +55,16 @@ p {
    gap: 32px;
    list-style: none;
    font-size: 0.9em;
-   /* line-height: 24px; */
 }
 
 .page-header .header-navigation ul li a {
    text-decoration: none;
    color: var(--text-color);
+}
+
+.page-header .header-navigation ul li a:hover {
+   color: var(--main-color);
+   border-bottom: 2px solid var(--main-color);
 }
 
 .page-header .header-button-action {
@@ -92,12 +99,11 @@ p {
 }
 
 .container .section-aboutUs {
-   height: fit-content;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 5rem;
-   margin-top: 3rem;
+   margin-top: 6rem;
 }
 
 .container .section-aboutUs .aboutUs {
@@ -133,6 +139,7 @@ p {
 }
 
 .container .section-aboutUs .metric .metric-item {
+   flex: 1;
    max-width: 280px;
    min-width: 150px;
    display: inherit;
@@ -156,24 +163,63 @@ p {
    margin-top: 6rem;
 }
 
-.container .section-jobs .jobs-status span {
+.container .section-jobs .status span {
    color: var(--main-color);
    padding: 4px 12px;
    border-radius: 1rem;
    background-color: rgba(142, 36, 36, 0.05);
 }
 
-.container .section-jobs .jobs-description h2 {
+.container .section-jobs .description h2 {
    margin: 2rem 0;
 }
 
-.container .section-jobs .jobs-description p {
+.container .section-jobs .description p {
    margin-bottom: 4rem;
 } 
 
-.container .section-jobs .jobs-ilustration img {
+.container .section-jobs .ilustration img {
    width: 100%;
+   max-width: 1216px;
+   margin-bottom: 2rem;
 }
+
+.container .section-jobs .job-opportunity {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2rem;
+}
+
+.container .section-jobs .job-opportunity .job-type {
+   width: 60%;
+   max-width: 788px;
+   text-align: left;
+   margin-bottom: 3rem;
+   color: var(--title-color);
+   font-size: 1.1rem;
+}
+
+.container .section-jobs .job-opportunity .job-type .job-info {
+   width: 100%;
+   border: 1px solid #e5e5e5;
+   padding: 24px;
+   border-radius: 1rem;
+   text-align: left;
+   margin: 1.5rem auto;
+   font-size: 1rem;
+}
+
+.container .section-jobs .job-opportunity .job-type .job-info .job-description {
+   font-size: .97rem;
+   margin-top: 1.5rem;
+   color: var(--text-color);
+}
+
+.container .section-jobs .job-opportunity .job-type .job-info .job-description span:nth-child(2) {
+   margin-left: 1rem;
+}
+
 
 
 
@@ -181,6 +227,24 @@ p {
 
 
 /* Responsive */
+
+@media screen and (min-width: 2000px) {
+   html {
+      font-size: 150%;
+   }
+}
+
+@media screen and (max-width: 1440px) {
+   html {
+      font-size: 110%;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   html {
+      font-size:  100%;
+   }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -193,6 +257,7 @@ p {
    }
 
    .page-header {
+      width: calc(100% - 4rem);
       grid-template-columns: 2fr 3fr 1fr;
    }
 
@@ -224,8 +289,20 @@ p {
    }
 
    .container .section-aboutUs .metric .metric-item {
-      width: 150px;
+      max-width: 210px;
       font-size: 90%;
+   }
+}
+
+@media screen and (max-width: 514px) {
+
+   .container .section-jobs .job-opportunity .job-type .job-info .job-description {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .container .section-jobs .job-opportunity .job-type .job-info .job-description span:nth-child(2) {
+      margin: 0;
    }
 }
 
@@ -236,8 +313,11 @@ p {
    }
 
    .page-header {
-      margin-bottom: 4rem;
+      width: calc(100% - 2rem);
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2rem 4rem;
+      margin-top: -9rem;
+      margin-bottom: 4rem;
    }
 
    .page-header .header-logo {
@@ -248,13 +328,16 @@ p {
       justify-content: flex-end;
    }
 
+   .container .section-aboutUs {
+      margin-top: 9rem;
+   }
+
    .container .section-aboutUs .aboutUs {
       width: 90%;
    }
 
    .container .section-aboutUs .aboutUs span {
       margin-bottom: 1em;
-      font-size: 1.5rem;
    }
 
    .container .section-aboutUs .aboutUs h1 {
