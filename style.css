@@ -3,7 +3,7 @@
 :root {
    --title-color: #101828;
    --text-color: #667085;
-   --main-color: #8E2424
+   --main-color: #8E2424;
 }
 
 * {
@@ -102,6 +102,7 @@ p {
    display: flex;
    flex-direction: column;
    align-items: center;
+   justify-content: flex-end;
    gap: 5rem;
    margin-top: 6rem;
 }
@@ -159,6 +160,9 @@ p {
 }
 
 .container  .section-jobs {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
    text-align: center;
    margin-top: 6rem;
 }
@@ -220,7 +224,35 @@ p {
    margin-left: 1rem;
 }
 
+.container .section-depoiment {
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
 
+.container .section-depoiment > span {
+   color: var(--main-color);
+}
+
+.container .section-depoiment > p {
+   font-size: 1.5em;
+   font-weight: 500;
+   margin: .9em 0;
+   color: var(--title-color);
+}
+
+.container .section-depoiment .depoiment-avatar img,
+.container .section-depoiment .depoiment-avatar p {
+   margin-bottom: .5em;
+   color: var(--title-color);
+}
+
+.container .section-depoiment .depoiment-avatar span {
+   color: var(--text-color);
+}
 
 
 
@@ -303,6 +335,10 @@ p {
 
    .container .section-jobs .job-opportunity .job-type .job-info .job-description span:nth-child(2) {
       margin: 0;
+   }
+
+   .container .section-depoiment > p {
+      font-size: 1.3rem;
    }
 }
 
