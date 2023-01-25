@@ -280,19 +280,20 @@ footer .footer-content {
 }
 
 footer .footer-content h2{
-   font-size: 1.5em;
+   font-size: 1.4em;
    font-weight: 600;
-   margin-bottom: 1em;
+   margin: 0 10px 1em 10px;
    color: var(--title-color);
 }
 
 footer .footer-content p {
-   margin-bottom: 2em;
+   margin: 0 10px 2em 10px;
 }
 
 footer .footer-content .footer-actions {
    display: flex;
    justify-content: space-between;
+   margin-bottom: 2em;
 }
 
 footer .footer-content .footer-actions input{
@@ -306,6 +307,10 @@ footer .footer-content .footer-actions input{
    margin: 0 2em 0 0;
 }
 
+footer .footer-content span {
+   font-size: .8em;
+   color: #98a2b3;
+}
 
 
 
@@ -452,6 +457,14 @@ footer .footer-content .footer-actions input{
 
    .container .section-depoiment .depoiment {
       margin: var(--side-padding-three);
+   }
+
+   footer {
+      height: fit-content;
+   }
+
+   footer .footer-content {
+      padding-bottom: 1em;
    }
 
    footer .footer-content .footer-actions {
